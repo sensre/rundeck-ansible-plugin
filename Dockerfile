@@ -20,7 +20,8 @@ RUN sudo apt-get -y update \
   && sudo apt-get -y --no-install-recommends install ca-certificates python3-pip sshpass \
   && sudo -H pip3 --no-cache-dir install --upgrade pip setuptools \
   # https://pypi.org/project/ansible/#history
-  && sudo -H pip3 --no-cache-dir install ansible==2.7.9 \
+  && sudo -H pip3 --no-cache-dir install ansible==2.8.5 \
+  && sudo apt-get install -y python3-paramiko \
   && sudo rm -rf /var/lib/apt/lists/* \
   && mkdir -p ${PROJECT_BASE}/etc/ \
   && sudo mkdir /etc/ansible
