@@ -1,6 +1,6 @@
 # Ubuntu 16.04 based, runs as rundeck user
 # https://hub.docker.com/r/rundeck/rundeck/tags
-FROM rundeck/rundeck:3.0.17
+FROM rundeck/rundeck:3.2.3
 
 MAINTAINER David Kirstein <dak@batix.com>
 
