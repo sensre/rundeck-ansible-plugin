@@ -2,7 +2,7 @@
 # https://hub.docker.com/r/rundeck/rundeck/tags
 FROM rundeck/rundeck:3.2.3
 
-MAINTAINER David Kirstein <dak@batix.com>
+MAINTAINER Sen Sre <sensrin@cisco.com>
 
 ENV ANSIBLE_HOST_KEY_CHECKING=false
 ENV RDECK_BASE=/home/rundeck
