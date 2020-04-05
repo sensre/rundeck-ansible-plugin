@@ -1,36 +1,38 @@
 pipeline {
-  environment {
-    registry = "sens/rundeck"
-    registryCredential = 'dockerhub'
-    dockerImage = ''
-  }
   agent any
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/sensre/rundeck-ansible-sdwan.git'
+        git 'https://github.com/sensre/rundeckansible-sdwan.git'
       }
     }
     stage('Building image') {
-      steps{
+      steps {
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
+
       }
     }
     stage('Deploy Image') {
-      steps{
+      steps {
         script {
           docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
           }
         }
+
       }
     }
     stage('Remove Unused docker image') {
-      steps{
+      steps {
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
     }
+  }
+  environment {
+    registry = 'sens/rundeck'
+    registryCredential = 'dockerhub'
+    dockerImage = ''
   }
 }
