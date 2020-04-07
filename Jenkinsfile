@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "sens/rundeck"
+    registry = "sens/docker-test"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
