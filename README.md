@@ -79,7 +79,6 @@ The following configuration attributes can be set on the Node, or in the project
 [Key Storage Path]: http://rundeck.org/docs/administration/key-storage.html
 
 Password authentication can be performed in one of two ways:
-
 1. Create a Rundeck Job with a [Secure Authentication Option][1], to pass in the password to use.  The default name of this option should be "ansible-ssh-password", but you can change the name that is expected, if necessary.
 2. Use the Rundeck [Key Storage Facility][2] to store a password, and use the path to it as the `ansible-ssh-password-storage-path`
 Note that the first takes precedence in evaluation over the second.
