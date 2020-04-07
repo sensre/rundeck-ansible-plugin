@@ -27,7 +27,7 @@ RUN sudo apt-get -y update \
   && sudo mkdir /etc/ansible
 
 # add default project
-COPY --chown=rundeck:rundeck docker/project.properties ${PROJECT_BASE}/etc/
+#COPY --chown=rundeck:rundeck docker/project.properties ${PROJECT_BASE}/etc/
 
 # add locally built ansible plugin
-COPY --chown=rundeck:rundeck build/libs/ansible-plugin-*.jar ${RDECK_BASE}/libext/
+#COPY --chown=rundeck:rundeck build/libs/ansible-plugin-*.jar ${RDECK_BASE}/libext/
