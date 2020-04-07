@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "sens/docker-test"
+    registry = "/artifacts/browse/tree/General/AS-release/Ascustomer/AS-Customer-AutoSen"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
