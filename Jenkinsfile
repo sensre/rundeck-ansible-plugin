@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "/artifacts/browse/tree/General/AS-release/Ascustomer/AS-Customer-AutoSen"
+    registry = "sens/rundeck"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
